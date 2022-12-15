@@ -63,7 +63,7 @@ const addUser = (user) => {
     name, email, password) 
     VALUES ($1,$2,$3) RETURNING *;`,[user.name, user.email, user.password])
     .then((result) => {
-      console.log(result.rows[0]);
+      // console.log(result.rows[0]);
       return result.rows[0];
     })
     .catch((err) => {
